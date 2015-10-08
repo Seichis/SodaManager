@@ -1,0 +1,9 @@
+{% extends '::base.html.twig' %}
+{% block body -%}
+<h1> Create New Soda </h1>
+
+{{form(form, {attr:{novalidate:'novalidate'}}) }}
+<ul>
+<li><a href="{{ path('soda')}}">Soda Manager</a></li>
+</ul
+{% endblock %}

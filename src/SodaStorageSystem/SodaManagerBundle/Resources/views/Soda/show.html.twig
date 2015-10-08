@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+<h1>Soda #{{soda.id}} - {{soda.title}} </h1>
+
+<h3>Quantity: {{soda.quantity}}</h3>
+<h3>Price: {{soda.price}}</h3>
+<p>{{soda.description}}</p>
+
+<ul>
+<li><a href="{{ path('soda')}}">Soda Manager</a></li>
+<li><a href="{{ path('soda_edit',{'id':soda.id})}}">Edit soda</a></li>
+<li> {{ form(delete_form) }} </li>
+
+</ul
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends '::base.html.twig' %}
+{% block body -%}
+<h1> Create New Order </h1>
+<p>You can choose from these sodas</p>
+<ul>
+{% if sodas is defined%} 
+{% for soda in sodas %}
+<li> Soda : {{soda.title}} Price: {{ soda.price }}
+{% endfor %}
+{% endif %}
+</ul>
+{{form(form, {attr:{novalidate:'novalidate'}}) }}
+<ul>
+<li><a href="{{ path('browse_sodas')}}">Back to browsing</a></li>
+</ul>
+{% endblock %}

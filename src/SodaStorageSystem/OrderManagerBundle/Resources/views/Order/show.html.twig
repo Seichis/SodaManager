@@ -1,0 +1,10 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+<h1>order #{{order.id}} - {{order.title}} </h1>
+<h3>Quantity: {{order.quantity}}</h3>
+
+<p><a href="{{path('order_new')}}">Make a new order</a> </p>
+<p><a href="{{path('browse_sodas')}}">Browse more sodas!!!</a></p>
+<p> {{ form(delete_form) }}<p> 
+{% endblock %}

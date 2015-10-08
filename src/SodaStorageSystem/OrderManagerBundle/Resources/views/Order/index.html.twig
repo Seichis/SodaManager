@@ -1,0 +1,12 @@
+{% extends '::base.html.twig' %}
+{% block body -%}
+	<h1>Browse our sweet and refreshing sodas</h1>
+		<ul>
+			
+				{% for soda in sodas %}
+					<li>{{soda.title}} </br>Price : {{soda.price}} </br> Description : {{soda.description}}</li>
+				{% endfor %}
+
+		</ul>
+	<p><a href="{{path('order_new')}}">Click to make your order</a> </p>
+{% endblock %}

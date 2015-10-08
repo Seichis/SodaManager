@@ -1,0 +1,11 @@
+soda_storage_system_soda_manager:
+    resource: "@SodaStorageSystemSodaManagerBundle/Resources/config/routing.yml"
+    prefix:   /soda
+
+soda_storage_system_order_manager:
+    resource: "@SodaStorageSystemOrderManagerBundle/Resources/config/routing.yml"
+    prefix:   /order
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

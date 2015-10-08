@@ -1,0 +1,11 @@
+{% extends '::base.html.twig' %}
+{% block body -%}
+<h1>Soda Manager</h1>
+<ul>
+{% for soda in sodas %}
+<li>{{soda.title}} - <a href="{{path('soda_show',{'id':soda.id})}}">View Soda</a></li>
+{% endfor %}
+</ul>
+<p><a href="{{path('soda_new')}}">Create new soda</a> </p>
+<li><a href="{{ path('show_orders')}}">Check your Orders</a></li>
+{% endblock %}

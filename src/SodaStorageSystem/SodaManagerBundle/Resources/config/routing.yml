@@ -1,0 +1,52 @@
+soda:
+    path: /
+    defaults: {_controller: SodaStorageSystemSodaManagerBundle:Soda:index}
+
+# A private area for Per Jensen where he can create,edit and delete sodas and can access the orders
+soda_new:
+    path: /new
+    defaults: {_controller:SodaStorageSystemSodaManagerBundle:Soda:new}
+
+soda_show:
+    path: /show/{id}
+    defaults: {_controller:SodaStorageSystemSodaManagerBundle:Soda:show}
+
+soda_create:
+    path: /create
+    defaults: {_controller:SodaStorageSystemSodaManagerBundle:Soda:create}
+    requirements: {_method:post}
+
+soda_edit:
+    path: /edit/{id}
+    defaults: {_controller:SodaStorageSystemSodaManagerBundle:Soda:edit}
+
+soda_update:
+    path: /update/{id}
+    defaults: {_controller:SodaStorageSystemSodaManagerBundle:Soda:update}
+    requirements: {_method: post|put}
+
+soda_delete:
+    path: /delete/{id}
+    defaults: {_controller:SodaStorageSystemSodaManagerBundle:Soda:delete}
+    requirements: {_method: post|delete}
+
+# Show the order and reply to them routes
+show_orders:
+    path: /show_orders
+    defaults: {_controller:SodaStorageSystemSodaManagerBundle:HandleOrders:show_orders}
+
+single_order:
+    path: /single_order/{id}
+    defaults: {_controller:SodaStorageSystemSodaManagerBundle:HandleOrders:single_order}
+
+accept_order:
+    path: /accept_order/{id}
+    defaults: {_controller:SodaStorageSystemSodaManagerBundle:HandleOrders:accept}
+    requirements: {_method: post|put|delete}
+
+decline_order:
+    path: /decline_order/{id}
+    defaults: {_controller:SodaStorageSystemSodaManagerBundle:HandleOrders:decline}
+    requirements: {_method: post|put|delete}
+############ END OF PRIVATE AREA #############
+

@@ -1,0 +1,26 @@
+# A public page where a visitor can place an order for sodas
+
+browse_sodas:
+    path: /
+    defaults: {_controller:SodaStorageSystemOrderManagerBundle:SubmitOrder:index}
+
+order_new:
+    path: /new
+    defaults: {_controller:SodaStorageSystemOrderManagerBundle:SubmitOrder:new}
+
+order_create:
+    path: /create
+    defaults: {_controller:SodaStorageSystemOrderManagerBundle:SubmitOrder:create}
+    requirements: {_method:post}
+
+order_show:
+    path: /show/{id}
+    defaults: {_controller:SodaStorageSystemOrderManagerBundle:SubmitOrder:show}
+
+order_delete:
+    path: /delete/{id}
+    defaults: {_controller:SodaStorageSystemOrderManagerBundle:SubmitOrder:delete}
+    requirements: {_method: post|delete}
+############ END OF ORDERS #############
+
+
